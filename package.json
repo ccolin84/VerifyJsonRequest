@@ -1,7 +1,7 @@
 {
   "name": "verifyJsonRequest",
   "version": "0.0.1",
-  "description": "Express middleware style utility for validating request json bodys",
+  "description": "Express middleware style utility for validating json request bodys",
   "main": "index.js",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
