@@ -2,9 +2,7 @@ import { expect } from "chai";
 import "mocha";
 import * as sinon from "sinon";
 
-import { Next, Request, Response } from "../lib/middleware";
-import { JsonValue } from "../lib/requestJsonKey";
-import { verifyJsonRequest } from "../lib/verifyJsonRequest";
+import { JsonValue, Next, Request, Response, verifyJsonRequest } from "../lib";
 
 describe("Verify Json Request", function() {
   it("Should return a middleware function", function() {
