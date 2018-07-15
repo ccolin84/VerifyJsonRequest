@@ -1,6 +1,6 @@
 {
   "name": "verifyJsonRequest",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Express middleware style utility for validating json request bodys",
   "main": "index.js",
   "scripts": {
