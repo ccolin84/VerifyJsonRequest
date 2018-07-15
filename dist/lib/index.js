@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function test() {
-    return "working!";
-}
-exports.test = test;
+var verifyJsonRequest_1 = require("./verifyJsonRequest");
+exports.verifyJsonRequest = verifyJsonRequest_1.verifyJsonRequest;
+var requestJsonKey_1 = require("../lib/requestJsonKey");
+exports.JsonValue = requestJsonKey_1.JsonValue;

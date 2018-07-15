@@ -10,16 +10,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
 require("mocha");
 var sinon = __importStar(require("sinon"));
-var requestJsonKey_1 = require("../lib/requestJsonKey");
-var verifyJsonRequest_1 = require("../lib/verifyJsonRequest");
+var lib_1 = require("../lib");
 describe("Verify Json Request", function () {
     it("Should return a middleware function", function () {
-        var middlewareFn = verifyJsonRequest_1.verifyJsonRequest({ params: [] });
+        var middlewareFn = lib_1.verifyJsonRequest({ params: [] });
         chai_1.expect(middlewareFn).to.be.a("function");
     });
     it("Should return a middleware fn that calls its 'next' callback if json request is validated", function () {
         // an empty array of params should always be validated
-        var middlewareFn = verifyJsonRequest_1.verifyJsonRequest({ params: [] });
+        var middlewareFn = lib_1.verifyJsonRequest({ params: [] });
         var request = { body: {} };
         var responseStatusWatcher = sinon.fake();
         var responseJsonWatcher = sinon.fake();
@@ -40,11 +39,11 @@ describe("Verify Json Request", function () {
         chai_1.expect(responseJsonWatcher.calledOnce).to.equal(false);
     });
     it("should call response.status and response.json on requests with invalid json bodies", function () {
-        var middlewareFn = verifyJsonRequest_1.verifyJsonRequest({
+        var middlewareFn = lib_1.verifyJsonRequest({
             params: [
                 {
                     errorMessage: "missing username",
-                    expected: [requestJsonKey_1.JsonValue.String],
+                    expected: [lib_1.JsonValue.String],
                     key: "username",
                 },
             ],
@@ -69,11 +68,11 @@ describe("Verify Json Request", function () {
         chai_1.expect(responseJsonWatcher.calledOnce).to.equal(true);
     });
     it("Should accept requests with bodies that do match the input config", function () {
-        var middlewareFn = verifyJsonRequest_1.verifyJsonRequest({
+        var middlewareFn = lib_1.verifyJsonRequest({
             params: [
                 {
                     errorMessage: "missing username",
-                    expected: [requestJsonKey_1.JsonValue.String],
+                    expected: [lib_1.JsonValue.String],
                     key: "username",
                 },
             ],
