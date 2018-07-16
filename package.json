@@ -2,6 +2,10 @@
   "name": "verifyJsonRequest",
   "version": "0.0.0",
   "description": "Express middleware style utility for validating json request bodys",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccolin84/VerifyJsonRequest"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
