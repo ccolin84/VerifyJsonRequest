@@ -2,7 +2,8 @@
   "name": "verifyJsonRequest",
   "version": "0.0.0",
   "description": "Express middleware style utility for validating json request bodys",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "npm run lint && npx nyc mocha --require ts-node/register --require source-map-support/register ./test/*.spec.ts",
