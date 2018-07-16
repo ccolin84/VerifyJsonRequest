@@ -38,7 +38,7 @@ describe("Verify Json Request", function() {
       params: [
         {
           errorMessage: "missing username",
-          expected: [JsonValue.String],
+          expectedType: { type: "value", value: JsonValue.String },
           key: "username",
         },
       ],
@@ -68,7 +68,7 @@ describe("Verify Json Request", function() {
       params: [
         {
           errorMessage: "missing username",
-          expected: [JsonValue.String],
+          expectedType: { type: "value", value: JsonValue.String },
           key: "username",
         },
       ],
