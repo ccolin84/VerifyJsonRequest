@@ -24,7 +24,7 @@ export function verifyJsonRequest(config: Config): Middleware {
   };
 }
 
-function compareRequestToConfig(
+export function compareRequestToConfig(
   params: RequestJsonKey[],
   body: any,
 ): RequestConfigComparision {
