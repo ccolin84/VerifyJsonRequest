@@ -1,5 +1,5 @@
-export { verifyJsonRequest } from "./verifyJsonRequest";
+export { verifyJsonRequest, compareRequestToConfig } from "./verifyJsonRequest";
 
 export { Next, Request, Response } from "../lib/middleware";
 
-export { JsonValue } from "../lib/requestJsonKey";
+export { JsonValue, RequestJsonKey } from "../lib/requestJsonKey";
