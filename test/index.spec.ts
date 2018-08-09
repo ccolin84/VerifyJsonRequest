@@ -20,7 +20,9 @@ import {
 } from "./mocks";
 
 describe("Compare Request To Config", function() {
-  it("not implimented");
+  it("is a function", function() {
+    expect(compareRequestToConfig).to.be.a("function");
+  });
 });
 
 describe("Verify Json Request", function() {
@@ -103,7 +105,7 @@ describe("Verify Json Request", function() {
     const middlewareFn = verifyJsonRequest({
       params: singleObjectParam,
     });
-    request = { body: { username: "John" } };
+    request = { body: { user: { username: "John" } } };
     middlewareFn(request, response, next);
     expect(next.calledOnce).to.equal(true);
     expect(responseStatusWatcher.calledOnce).to.equal(false);
